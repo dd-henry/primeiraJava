@@ -1,4 +1,3 @@
-import java.io.Console;
 import java.util.Scanner;
 
 public class Main {
@@ -17,9 +16,8 @@ public class Main {
 
     public static void menu(){
         Scanner sc = new Scanner(System.in);
-        String input = "";
 
-        System.out.printf("""
+        System.out.println("""
                 
                 1 - Consultar saldos
                 2 - Receber valor
@@ -35,7 +33,7 @@ public class Main {
                 System.out.printf("Saldo do usuário: %.2f\n", SaldoUsuario);
 
                 System.out.println("\n\nPressione qualquer tecla para voltar");
-                input = sc.nextLine();
+                sc.nextLine();
                 menu();
 
             case 2:
@@ -44,7 +42,7 @@ public class Main {
                 sc.nextLine();
                 System.out.printf("\nNovo saldo: %.2f", SaldoUsuario);
                 System.out.println("\n\nPressione qualquer tecla para voltar");
-                input = sc.nextLine();
+                sc.nextLine();
                 menu();
 
             case 3:
@@ -53,11 +51,11 @@ public class Main {
                 sc.nextLine();
                 System.out.printf("\nNovo saldo: %.2f", SaldoUsuario);
                 System.out.println("\n\nPressione qualquer tecla para voltar");
-                input = sc.nextLine();
+                sc.nextLine();
                 menu();
 
             case 4:
-                System.out.println("Até mais.....");
+                System.out.println("Até mais....");
                 System.exit(0);
 
             default:
