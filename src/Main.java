@@ -32,7 +32,7 @@ public class Main {
             case 1:
                 System.out.printf("Saldo do usuário: %.2f\n", SaldoUsuario);
 
-                System.out.println("\n\nPressione qualquer tecla para voltar");
+                System.out.println("\n\nPressione enter para voltar");
                 sc.nextLine();
                 menu();
 
@@ -41,7 +41,7 @@ public class Main {
                 SaldoUsuario += sc.nextDouble();
                 sc.nextLine();
                 System.out.printf("\nNovo saldo: %.2f", SaldoUsuario);
-                System.out.println("\n\nPressione qualquer tecla para voltar");
+                System.out.println("\n\nPressione enter para voltar");
                 sc.nextLine();
                 menu();
 
@@ -50,7 +50,7 @@ public class Main {
                 SaldoUsuario -= sc.nextDouble();
                 sc.nextLine();
                 System.out.printf("\nNovo saldo: %.2f", SaldoUsuario);
-                System.out.println("\n\nPressione qualquer tecla para voltar");
+                System.out.println("\n\nPressione enter para voltar");
                 sc.nextLine();
                 menu();
 
