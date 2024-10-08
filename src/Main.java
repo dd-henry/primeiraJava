@@ -47,8 +47,13 @@ public class Main {
 
             case 3:
                 System.out.println("Digite o valor que será transferido:");
-                SaldoUsuario -= sc.nextDouble();
+                double input = sc.nextDouble();
                 sc.nextLine();
+                if (input > SaldoUsuario){
+                    System.out.println("Nao ha saldo para realizar essa tranferencia");
+                    menu();
+                }
+                SaldoUsuario -= input;
                 System.out.printf("\nNovo saldo: %.2f", SaldoUsuario);
                 System.out.println("\n\nPressione enter para voltar");
                 sc.nextLine();
