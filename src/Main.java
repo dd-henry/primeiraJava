@@ -2,8 +2,15 @@ import java.io.Console;
 import java.util.Scanner;
 
 public class Main {
-    double SaldoUsuario = 800;
+    static double SaldoUsuario = 800;
     public static void main(String[] args) {
+        System.out.println("""
+                -----------------------
+                Gerenciador de financas
+                -----------------------
+                \n
+                """);
+        menu();
 
 
     }
@@ -21,23 +28,40 @@ public class Main {
                 """);
 
         int decisao = sc.nextInt();
+        sc.nextLine();
 
         switch (decisao){
             case 1:
-                System.out.println("""
-                        Saldo: %.2f
-                        
-                        
-                        Pressione qualquer tecla para voltar . . .
-                        """, SaldoUsuario);
+                System.out.printf("Saldo do usuário: %.2f\n", SaldoUsuario);
+
+                System.out.println("\n\nPressione qualquer tecla para voltar");
                 input = sc.nextLine();
                 menu();
 
             case 2:
                 System.out.println("Digite o valor a receber:");
                 SaldoUsuario += sc.nextDouble();
-                System.out.println("Novo saldo: %.f", SaldoUsuario);
+                sc.nextLine();
+                System.out.printf("\nNovo saldo: %.2f", SaldoUsuario);
+                System.out.println("\n\nPressione qualquer tecla para voltar");
                 input = sc.nextLine();
+                menu();
+
+            case 3:
+                System.out.println("Digite o valor que será transferido:");
+                SaldoUsuario -= sc.nextDouble();
+                sc.nextLine();
+                System.out.printf("\nNovo saldo: %.2f", SaldoUsuario);
+                System.out.println("\n\nPressione qualquer tecla para voltar");
+                input = sc.nextLine();
+                menu();
+
+            case 4:
+                System.out.println("Até mais.....");
+                System.exit(0);
+
+            default:
+                System.out.println("Opção inválida! Tente novamente.");
                 menu();
         }
 
